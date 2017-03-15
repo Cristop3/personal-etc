@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>个人主页</title>
+    <link rel='stylesheet' type='text/css' href="./jquery.pagepiling.css" />
+    <link rel='stylesheet' type='text/css' href='./examples.css' />
+    <style></style>
+</head>
+
+<body>
+    <ul id='menu'>
+        <li data-menuanchor='page1' class='active'><a href="#page1">Page1</a></li>
+        <li data-menuanchor='page2'><a href='#page2'>page2</a></li>
+        <li data-menuanchor='page3'><a href='#page3'>page3</a></li>
+    </ul>
+
+    <div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+
+    <div id='pagepiling'>
+        <div class="section" id='section1'>
+            <h1>只有他妈的先仿写了</h1>
+            <p>狗日的没得思路啊</p>
+        </div>
+
+        <div class="section" id='section2'>
+            <div class="intro">
+                <h1>Rita的龟</h1>
+                <p>说锤子啊</p>
+            </div>
+        </div>
+
+        <div class="section" id='section4'>
+            <div class='intro'>
+                <h1>老子就是这样的人</h1>
+                <p>你他妈的爱耍不耍</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src='./jquery.pagepiling.js'></script>
+    <script>
+        var deleteLog = false;
+        $(document).ready(function(){
+            $('#pagepiling').pagepiling({
+                menu:'#menu',
+                anchors:['page1','page2','page3'],
+                sectionColor:['#bfda00','#2ebe21','#51bec4'],
+                loopTop:true,
+                loopBottom:true
+            })
+        })
+    </script>
+</body>
+
+</html>
